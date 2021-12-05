@@ -51,7 +51,7 @@ h4.main-heading + h1{
     font-weight: 600;
     line-height: 1.3;
     margin: 0;
-    max-width: 330px;
+    max-width: 318px;
 }
 
 /* End Global Rules */
@@ -64,6 +64,8 @@ h4.main-heading + h1{
 
 .header .navbar{
     background: #f8f8f8;
+    position: sticky;
+    top: 0;
 }
 
 .header .navbar .container{
@@ -355,3 +357,81 @@ h4.main-heading + h1{
 }
 
 /* End About */
+
+/* Portfolio */
+
+.portfolio{
+    padding: var(--section-padding) 0;
+}
+
+.portfolio .container .projects{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 25px;
+    justify-items: center;
+    align-items: flex-start;
+    padding: 50px 0;
+}
+
+@media (max-width: 390px){
+    .portfolio .container .projects{
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+.portfolio .container .projects .box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.portfolio .container .projects .box::after{
+    content: attr(project-name);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    background: #314484cb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 23px;
+    color: #fff;
+    width: 70px;
+    height: 70px;
+    opacity: 0;
+    border-radius: 10px;
+    transition: var(--main-transition);
+}
+
+.portfolio .container .projects .box:hover::after{
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+}
+
+.portfolio .container .projects .box img{
+    width: 100%;
+}
+
+.portfolio .container a{
+    display: block;
+    text-align: center;
+    width: fit-content;
+    margin: 0 auto;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--secondary-color);
+    transition: var(--main-transition);
+}
+
+.portfolio .container a:hover{
+    color: var(--main-color);
+}
+
+/* End Portfolio */
