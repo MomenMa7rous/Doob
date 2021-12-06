@@ -51,7 +51,7 @@ h4.main-heading + h1{
     font-weight: 600;
     line-height: 1.3;
     margin: 0;
-    max-width: 318px;
+    max-width: 330px;
 }
 
 /* End Global Rules */
@@ -112,6 +112,10 @@ h4.main-heading + h1{
 @media (max-width: 767px){
     .header .navbar .container{
         flex-direction: column;
+    }
+
+    .header .navbar .container ul.nav{
+        padding-bottom: 20px;
     }
 }
 
@@ -383,7 +387,7 @@ h4.main-heading + h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 10px;
+    border-radius: 7px;
     overflow: hidden;
     position: relative;
 }
@@ -404,7 +408,7 @@ h4.main-heading + h1{
     width: 70px;
     height: 70px;
     opacity: 0;
-    border-radius: 10px;
+    border-radius: 7px;
     transition: var(--main-transition);
 }
 
@@ -435,3 +439,98 @@ h4.main-heading + h1{
 }
 
 /* End Portfolio */
+
+/* Blog */
+
+.blog{
+    padding: var(--section-padding) 0;
+    background: var(--section-background);
+}
+
+.blog .container .toggle-buttons{
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.blog .container .toggle-buttons i{
+    font-size: 25px;
+    color: #adadad;
+    transition: var(--main-transition);
+    cursor: pointer;
+}
+
+.blog .container .toggle-buttons i:hover{
+    color: var(--main-color);
+}
+
+.blog .container .posts{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+@media(max-width: 410px){
+    .blog .container .posts{
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+.blog .container .posts .post{
+    padding: 35px 25px;
+    background: #fff;
+    box-shadow: 0 0 10px #00000010;
+    color: var(--main-color);
+    transition: var(--main-transition);
+    border-radius: 7px;
+}
+
+.blog .container .posts .post:hover{
+    background: var(--secondary-color);
+    color: #fff;
+}
+
+.blog .container .posts .post h3.title{
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin: 0 0 10px;
+}
+
+.blog .container .posts .post h3.title + span.date{
+    margin-bottom: 15px;
+    display: block;
+    padding-bottom: 7.5px;
+    border-bottom: 1px solid #00000030;
+}
+
+.blog .container .posts .post:hover h3.title + span.date{
+    border-color: #ffffff30;
+}
+
+.blog .container .posts .post h3.title + span.date + p{
+    line-height: 1.7;
+    font-size: 18px;
+}
+
+.blog .container > a{
+    display: block;
+    text-align: center;
+    width: fit-content;
+    margin: 0 auto;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--secondary-color);
+    transition: var(--main-transition);
+}
+
+.blog .container > a:hover{
+    color: var(--main-color);
+}
+
+/* End Blog */
