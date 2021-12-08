@@ -643,3 +643,83 @@ h4.main-heading + h1{
 }
 
 /* End Contact */
+
+/* Footer */
+
+footer{
+    padding: var(--section-padding) 0;
+    background: var(--main-color);
+    color: #fff;
+}
+
+footer .container{
+    text-align: center;
+}
+
+footer .container a{
+    color: inherit;
+}
+
+footer .container h3,
+footer .container h1
+{
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+footer .container h3{
+    margin: 0 0 10px;
+}
+
+footer .container h1{
+    font-size: 50px;
+    margin: 0;
+    color: var(--secondary-color);
+}
+
+footer .container ul.links{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin: 30px auto 40px;
+    width: fit-content;
+}
+
+footer .container ul.links li a{
+    font-size: 20px;
+    transition: var(--main-transition);
+}
+
+footer .container ul.links li a:hover{
+    color: var(--secondary-color);
+}
+
+footer .container p.copyright{
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+footer .container p.copyright + ul.social{
+    display: flex;
+    gap: 30px;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+footer .container p.copyright + ul.social li a{
+    font-size: 30px;
+    transition: var(--main-transition);
+}
+
+footer .container p.copyright + ul.social li a:hover{
+    color: var(--secondary-color);
+}
+
+@media (max-width: 767px){
+    footer .container h1{
+        font-size: 35px;
+    }
+}
+
+/* End Footer */
