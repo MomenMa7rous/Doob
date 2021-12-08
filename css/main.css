@@ -54,6 +54,12 @@ h4.main-heading + h1{
     max-width: 330px;
 }
 
+@media (max-width: 767px){
+    h4.main-heading + h1{
+        font-size: 30px;
+    }
+}
+
 /* End Global Rules */
 
 /* Header */
@@ -151,7 +157,7 @@ h4.main-heading + h1{
 .header > .container .intro-text > a:first-of-type{
     display: inline-block;
     padding: 15px 25px;
-    border-radius: 25px;
+    border-radius: 10px;
     background: var(--secondary-color);
     border: 2px solid var(--secondary-color);
     color: #fff;
@@ -242,12 +248,19 @@ h4.main-heading + h1{
     margin-top: 20px;
     padding: 15px 25px;
     display: inline-block;
-    border-radius: 25px;
+    border-radius: 10px;
     background: var(--secondary-color);
     color: #fff;
     font-weight: 500;
     border: 2px solid var(--secondary-color);
     transition: var(--main-transition);
+}
+
+@media (max-width: 767px){
+    .about .container:first-child .text a{
+        padding: 12px 20px;
+        font-size: 16px;
+    }
 }
 
 .about .container:first-child .text a:hover{
@@ -536,3 +549,97 @@ h4.main-heading + h1{
 }
 
 /* End Blog */
+
+/* Contact */
+
+.contact{
+    padding: var(--section-padding) 0;
+}
+
+.contact .container form{
+    margin: 30px 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact .container form input,
+.contact .container form textarea
+{
+    padding: 25px;
+    background: var(--section-background);
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    color: var(--main-color);
+    font-weight: 500;
+}
+
+.contact .container form input:focus::placeholder,
+.contact .container form textarea:focus::placeholder
+{
+    opacity: 0;
+}
+
+.contact .container form textarea{
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 250px;
+    min-height: 250px;
+}
+
+.contact .container form input::placeholder,
+.contact .container form textarea::placeholder
+{
+    color: var(--main-color);
+    font-weight: 500;
+    transition: opacity var(--main-transition);
+}
+
+.contact .container form .input{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.contact .container form .input input{
+    width: 50%;
+}
+
+.contact .container form button[type="submit"]{
+    display: inline-block;
+    padding: 15px 25px;
+    border-radius: 10px;
+    background: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    transition: var(--main-transition);
+    width: fit-content;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.contact .container form button[type="submit"]:hover{
+    color: var(--main-color);
+    background: none;
+}
+
+@media (max-width: 767px){
+    .header > .container .intro-text > a:first-of-type{
+        padding: 12px 20px;
+        font-size: 16px;
+    }
+
+    .contact .container form .input{
+        flex-direction: column;
+    }
+
+    .contact .container form .input input{
+        width: 100%;
+    }
+}
+
+/* End Contact */
